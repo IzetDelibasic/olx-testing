@@ -1,0 +1,23 @@
+{
+  "name": "olx-selenium-tests",
+  "version": "1.0.0",
+  "description": "Automatizovani testovi za OLX.ba - Seminarski rad",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha search.test.js --timeout 60000"
+  },
+  "keywords": [
+    "selenium",
+    "testing",
+    "olx",
+    "mocha"
+  ],
+  "author": "Student",
+  "license": "MIT",
+  "devDependencies": {
+    "@puppeteer/browsers": "^2.11.0",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.16.0"
+  }
+}
