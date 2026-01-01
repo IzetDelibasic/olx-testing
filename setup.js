@@ -11,21 +11,10 @@ const PAGE_LOAD_TIMEOUT = 30000;
 async function setupDriver() {
   try {
     const options = new chrome.Options();
-    const chromedriverPath = require("path").join(
-      __dirname,
-      "chromedriver",
-      "win64-143.0.7499.170",
-      "chromedriver-win64",
-      "chromedriver.exe"
-    );
-    const service = new chrome.ServiceBuilder(chromedriverPath);
-
     driver = await new Builder()
       .forBrowser(Browser.CHROME)
       .setChromeOptions(options)
-      .setChromeService(service)
       .build();
-
     return driver;
   } catch (error) {
     console.error("Greška pri pokretanju WebDriver-a:", error);
